@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="A cinematic love story website for Ani and Pari, rebuilt as a responsive and deployable experience."
+  >
+  <title>Ani & Pari | A Love Story</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#top">Ani <span>&</span> Pari</a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Open navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="site-nav">
+        <a href="#story">Story</a>
+        <a href="#moments">Moments</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#forever">Forever</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-observed" id="hero">
+        <div class="petal-field" aria-hidden="true"></div>
+        <div class="hero-copy reveal">
+          <p class="eyebrow" id="hero-eyebrow"></p>
+          <h1 class="hero-title" id="hero-title"></h1>
+          <p class="hero-subtitle" id="hero-subtitle"></p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#story">Read our story</a>
+            <button class="button button-secondary" type="button" id="today-note-button">
+              Show today's note
+            </button>
+          </div>
+        </div>
+
+        <aside class="hero-card reveal">
+          <p class="card-label">Today's note</p>
+          <p class="today-note" id="today-note"></p>
+          <div class="hero-card-footer">
+            <span>Saved on this device</span>
+            <span id="saved-date-label">First hello not set yet</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="quote-band section-observed reveal" id="quote-band">
+        <p class="quote-mark">"</p>
+        <blockquote class="featured-quote" id="featured-quote"></blockquote>
+        <p class="quote-author" id="featured-quote-author"></p>
+        <div class="quote-controls">
+          <button class="quote-button" id="prev-quote" type="button" aria-label="Previous quote">←</button>
+          <button class="quote-button" id="next-quote" type="button" aria-label="Next quote">→</button>
+        </div>
+      </section>
+
+      <section class="content-section section-observed" id="story">
+        <div class="section-heading reveal">
+          <p class="section-label">The way you changed everything</p>
+          <h2 class="section-title">Because of you, life became more vivid.</h2>
+          <p class="section-copy" id="story-intro"></p>
+        </div>
+        <div class="pillar-grid" id="pillar-grid"></div>
+      </section>
+
+      <section class="timeline-section section-observed" id="moments">
+        <div class="section-heading reveal">
+          <p class="section-label">Moments that built us</p>
+          <h2 class="section-title">A story that keeps unfolding.</h2>
+        </div>
+        <div class="timeline" id="timeline"></div>
+      </section>
+
+      <section class="letter-section section-observed">
+        <div class="section-heading reveal">
+          <p class="section-label">From Ani, to Pari</p>
+          <h2 class="section-title">A letter that still feels unfinished in the best way.</h2>
+        </div>
+        <article class="letter-card reveal" id="letter-card"></article>
+      </section>
+
+      <section class="gallery-section section-observed" id="gallery">
+        <div class="section-heading reveal">
+          <p class="section-label">Photos and memories</p>
+          <h2 class="section-title">Tap a memory to open it.</h2>
+          <p class="section-copy">
+            You can swap the placeholder cards for real photos by editing
+            <code>site-content.js</code>.
+          </p>
+        </div>
+        <div class="gallery-grid" id="gallery-grid"></div>
+      </section>
+
+      <section class="forever-section section-observed" id="forever">
+        <div class="section-heading reveal">
+          <p class="section-label">Our forever clock</p>
+          <h2 class="section-title">Choose the day your story began.</h2>
+          <p class="section-copy">
+            Pick a date once and this page will remember it in your browser.
+          </p>
+        </div>
+
+        <div class="forever-layout">
+          <form class="date-card reveal" id="date-form">
+            <label class="field-label" for="anniversary-input">Date of the first hello</label>
+            <input class="date-input" id="anniversary-input" name="anniversary" type="date">
+            <button class="button button-primary" type="submit">Save our date</button>
+            <button class="button button-secondary" id="clear-date-button" type="button">Clear</button>
+          </form>
+
+          <div class="count-grid reveal" id="count-grid"></div>
+        </div>
+
+        <div class="promise-grid" id="promise-grid"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer reveal">
+      <p id="footer-message"></p>
+      <p class="footer-meta">Built to be posted, revisited, and kept.</p>
+    </footer>
+  </div>
+
+  <dialog class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close memory">×</button>
+    <div class="lightbox-media" id="lightbox-media"></div>
+    <div class="lightbox-copy">
+      <p class="lightbox-kicker" id="lightbox-kicker"></p>
+      <h3 class="lightbox-title" id="lightbox-title"></h3>
+      <p class="lightbox-description" id="lightbox-description"></p>
+    </div>
+  </dialog>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
