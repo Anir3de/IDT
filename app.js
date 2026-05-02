@@ -100,15 +100,22 @@ function renderStory() {
 function renderGallery() {
   galleryGrid.innerHTML = siteContent.gallery
     .map((item, index) => {
-      const hasImage = Boolean(item.src);
-      const media = hasImage
-        ? `<img src="${item.src}" alt="${item.title}" loading="lazy">`
+      const isVideo = item.type === "video";
+      const hasMedia = Boolean(item.src);
+      const previewStyle = item.previewStyle ? ` style="${item.previewStyle}"` : "";
+      const media = hasMedia
+        ? isVideo
+          ? `<div class="gallery-media-shell">
+              <video class="gallery-media" src="${item.src}" muted playsinline preload="metadata"></video>
+              <span class="gallery-badge">Play</span>
+            </div>`
+          : `<img class="gallery-media" src="${item.src}" alt="${item.title}" loading="lazy"${previewStyle}>`
         : `<div class="gallery-placeholder placeholder-${(index % 4) + 1}">
             <span>${item.tag}</span>
           </div>`;
 
       return `
-        <button class="gallery-card reveal" type="button" data-gallery-index="${index}">
+        <button class="gallery-card reveal ${isVideo ? "gallery-card-video" : ""}" type="button" data-gallery-index="${index}">
           ${media}
           <span class="gallery-card-meta">${item.type}</span>
           <strong>${item.title}</strong>
@@ -216,7 +223,11 @@ function openLightbox(index) {
   lightboxTitle.textContent = item.title;
   lightboxDescription.textContent = item.description;
 
-  if (item.src) {
+  if (item.src && item.type === "video") {
+    lightboxMedia.innerHTML = `
+      <video class="lightbox-video" src="${item.src}" controls autoplay playsinline preload="metadata"></video>
+    `;
+  } else if (item.src) {
     lightboxMedia.innerHTML = `<img src="${item.src}" alt="${item.title}">`;
   } else {
     lightboxMedia.innerHTML = `
@@ -232,6 +243,11 @@ function openLightbox(index) {
 }
 
 function closeLightbox() {
+  const media = lightboxMedia.querySelector("video");
+  if (media) {
+    media.pause();
+  }
+
   if (lightbox.open) {
     lightbox.close();
   }

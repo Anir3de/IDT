@@ -95,29 +95,102 @@ export const siteContent = {
   gallery: [
     {
       type: "photo",
-      title: "Golden hour",
-      description: "Replace this card with one of your favorite portraits together.",
-      tag: "Photo one",
-      src: ""
-    },
-    {
-      type: "memory",
-      title: "Late-night conversation",
-      description: "A placeholder for the kind of moment that changed everything without trying to.",
-      tag: "Memory"
-    },
-    {
-      type: "video",
-      title: "A moving memory",
-      description: "Drop a video thumbnail image and description here when you are ready.",
-      tag: "Video"
+      title: "Little sunshine",
+      description: "A childhood memory that deserved a permanent place here.",
+      tag: "Photo",
+      src: "/media/IMG_8768.PNG",
+      previewStyle: "object-fit: cover; object-position: center 38%;"
     },
     {
       type: "photo",
-      title: "A day worth replaying",
-      description: "Another slot for a real picture once you decide what belongs here.",
-      tag: "Photo two",
-      src: ""
+      title: "A goofy call",
+      description: "One of those silly little moments that makes the gallery feel alive.",
+      tag: "Photo",
+      src: "/media/IMG_8036.PNG"
+    },
+    {
+      type: "photo",
+      title: "Car-ride glow",
+      description: "A soft close-up that feels like a favorite saved in the camera roll.",
+      tag: "Photo",
+      src: "/media/IMG_9458.jpg"
+    },
+    {
+      type: "photo",
+      title: "Streetlight smile",
+      description: "A night-time frame with just the right amount of sparkle.",
+      tag: "Photo",
+      src: "/media/IMG_9460.jpg"
+    },
+    {
+      type: "photo",
+      title: "Us in monochrome",
+      description: "A black-and-white memory that still feels warm.",
+      tag: "Photo",
+      src: "/media/IMG_9459.PNG"
+    },
+    {
+      type: "photo",
+      title: "Heart-filter night",
+      description: "A playful photo together, saved exactly the way it felt.",
+      tag: "Photo",
+      src: "/media/IMG_7928.JPG"
+    },
+    {
+      type: "photo",
+      title: "Dressed up and glowing",
+      description: "One of those photos that instantly earns a place in the favorites folder.",
+      tag: "Photo",
+      src: "/media/IMG_8127.JPG"
+    },
+    {
+      type: "video",
+      title: "Video memory 01",
+      description: "A short clip saved as part of your story.",
+      tag: "Video",
+      src: "/media/0EA12082-2F12-4F3B-83DD-2E74DD401F41.MP4"
+    },
+    {
+      type: "video",
+      title: "Video memory 02",
+      description: "Another moment worth replaying.",
+      tag: "Video",
+      src: "/media/2D7327EC-6E31-44B2-BE47-52A18B3D83C3.MP4"
+    },
+    {
+      type: "video",
+      title: "Video memory 03",
+      description: "A favorite clip, now built right into the gallery.",
+      tag: "Video",
+      src: "/media/56DC1638-1A43-44AC-B45B-EF1A21222087.MOV"
+    },
+    {
+      type: "video",
+      title: "Video memory 04",
+      description: "One more memory to press play on.",
+      tag: "Video",
+      src: "/media/DB36EB5D-04BC-42E6-9E0C-BC33D4910335.MP4"
+    },
+    {
+      type: "video",
+      title: "Video memory 05",
+      description: "A quick clip tucked into the timeline of your story.",
+      tag: "Video",
+      src: "/media/F5E0762B-F166-47CF-92A6-B3E3E26BDE6E.MP4"
+    },
+    {
+      type: "video",
+      title: "Video memory 06",
+      description: "A saved moment that now opens directly on the site.",
+      tag: "Video",
+      src: "/media/F7B97BA3-8AA4-4E9B-95C8-5FDA4F8658DF.mov"
+    },
+    {
+      type: "video",
+      title: "Video memory 07",
+      description: "Another clip added to the collection.",
+      tag: "Video",
+      src: "/media/IMG_7295.mov"
     }
   ],
   promises: [
