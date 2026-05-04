@@ -34,6 +34,19 @@ const siteNav = document.getElementById("site-nav");
 let activeQuoteIndex = 0;
 let quoteTimer = null;
 
+function getMediaType(source) {
+  const lower = source.toLowerCase();
+  if (lower.endsWith(".mp4")) {
+    return "video/mp4";
+  }
+
+  if (lower.endsWith(".mov")) {
+    return "video/quicktime";
+  }
+
+  return "";
+}
+
 function pickRandomNote() {
   const index = Math.floor(Math.random() * siteContent.notes.length);
   return siteContent.notes[index];
@@ -106,7 +119,9 @@ function renderGallery() {
       const media = hasMedia
         ? isVideo
           ? `<div class="gallery-media-shell">
-              <video class="gallery-media" src="${item.src}" muted playsinline preload="metadata"></video>
+              <video class="gallery-media" muted playsinline preload="metadata">
+                <source src="${item.src}" type="${getMediaType(item.src)}">
+              </video>
               <span class="gallery-badge">Play</span>
             </div>`
           : `<img class="gallery-media" src="${item.src}" alt="${item.title}" loading="lazy"${previewStyle}>`
@@ -225,7 +240,9 @@ function openLightbox(index) {
 
   if (item.src && item.type === "video") {
     lightboxMedia.innerHTML = `
-      <video class="lightbox-video" src="${item.src}" controls autoplay playsinline preload="metadata"></video>
+      <video class="lightbox-video" controls autoplay playsinline preload="metadata">
+        <source src="${item.src}" type="${getMediaType(item.src)}">
+      </video>
     `;
   } else if (item.src) {
     lightboxMedia.innerHTML = `<img src="${item.src}" alt="${item.title}">`;
