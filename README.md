@@ -1,6 +1,6 @@
-# Ani & Pari Website
+# Smart Student Presentation Website
 
-This is a zero-dependency romantic website rebuilt from the original standalone HTML file into a deployable structure.
+This is a zero-dependency presentation website for the Smart Student Burnout & Productivity Ecosystem.
 
 ## Files to edit
 
@@ -11,16 +11,25 @@ This is a zero-dependency romantic website rebuilt from the original standalone 
 ## Run locally
 
 ```bash
-node server.js
+npm start
 ```
 
 Then open `http://localhost:3000`.
 
 ## Railway
 
-Railway can deploy this directly because the repo includes:
+This repo now supports both Railway deployment styles:
 
-- `package.json` with a `start` script
-- `server.js` that respects `PORT`
+### Option 1: Node service
 
-After pushing the repo, Railway should detect it as a Node app and run `npm start`.
+- Build command: leave empty
+- Start command: `npm start`
+
+Use this when Railway detects the project as a normal Node app.
+
+### Option 2: Static site
+
+- Build command: `npm run build`
+- Publish directory: `build`
+
+Use this when Railway is asking for a publish directory. The build script copies the site files and `media/` into `build/`.

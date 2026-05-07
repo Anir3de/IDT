@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Presentation website for the Smart Student Burnout & Productivity Ecosystem."
+  >
+  <title>Smart Student Burnout & Productivity Ecosystem</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+      <a class="brand" href="#overview">Smart Student</a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        aria-label="Open navigation"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="site-nav">
+        <a href="#overview">Overview</a>
+        <a href="#poster">Poster</a>
+        <a href="#gallery">Visuals</a>
+        <a href="#research">Research</a>
+        <a href="#strategy">Strategy</a>
+        <a href="#implementation">Implementation</a>
+        <a href="#closing">Closing</a>
+      </nav>
+      <a class="header-cta" href="#poster">View Board</a>
+    </header>
+
+    <main>
+      <section class="hero section-observed" id="overview">
+        <div class="hero-backdrop" aria-hidden="true"></div>
+        <div class="hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow" id="hero-eyebrow"></p>
+            <h1 class="hero-title" id="hero-title"></h1>
+            <p class="hero-description" id="hero-description"></p>
+            <div class="feature-ribbon" id="hero-features"></div>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#research">Explore research</a>
+              <a class="button button-secondary" href="#implementation">See rollout plan</a>
+            </div>
+            <div class="hero-stat-strip" id="hero-stat-strip"></div>
+          </div>
+
+          <aside class="hero-panel reveal">
+            <div class="panel-card visual-panel">
+              <p class="panel-label">Story in visuals</p>
+              <div class="hero-montage" id="hero-montage"></div>
+            </div>
+
+            <div class="panel-card">
+              <p class="panel-label">Presented by our team</p>
+              <div class="team-grid" id="team-grid"></div>
+            </div>
+
+            <div class="panel-card">
+              <p class="panel-label">Why this matters</p>
+              <div class="signal-list" id="signal-list"></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="poster-section section-observed" id="poster">
+        <div class="section-heading reveal">
+          <p class="section-label">Presentation source</p>
+          <h2 class="section-title">Your poster, translated into a presentation-ready website.</h2>
+          <p class="section-copy">
+            This page keeps the original board visible while turning the content into a smoother story for live presenting, scrolling, and discussion.
+          </p>
+        </div>
+
+        <div class="poster-layout">
+          <figure class="poster-frame reveal">
+            <img
+              src="/media/poster-reference.png"
+              alt="Smart Student Burnout and Productivity Ecosystem poster board"
+            >
+          </figure>
+
+          <div class="poster-summary reveal" id="poster-summary"></div>
+        </div>
+      </section>
+
+      <section class="gallery-section section-observed" id="gallery">
+        <div class="section-heading reveal">
+          <p class="section-label">Visual story</p>
+          <h2 class="section-title">More visual, more colorful, and easier to present.</h2>
+          <p class="section-copy">
+            Instead of making the audience read one dense board, this section breaks the concept into bold visual moments: the problem, the student, the product, and the team.
+          </p>
+        </div>
+
+        <div class="story-gallery" id="story-gallery"></div>
+      </section>
+
+      <section class="content-section section-observed" id="research">
+        <div class="section-heading reveal">
+          <p class="section-label">Inspiration</p>
+          <h2 class="section-title">Research that grounds the product in real student pressure.</h2>
+          <p class="section-copy">
+            The first half of the presentation focuses on the problem, the student perspective, and the insights that shaped the concept.
+          </p>
+        </div>
+
+        <div class="presentation-grid" id="research-grid"></div>
+      </section>
+
+      <section class="content-section alt section-observed" id="strategy">
+        <div class="section-heading reveal">
+          <p class="section-label">Ideation</p>
+          <h2 class="section-title">A strategy that connects empathy, operations, and product scope.</h2>
+          <p class="section-copy">
+            This part of the deck turns research into a concrete system: goals, constraints, value, delivery steps, and prioritization.
+          </p>
+        </div>
+
+        <div class="presentation-grid strategy-grid" id="strategy-grid"></div>
+      </section>
+
+      <section class="implementation-section section-observed" id="implementation">
+        <div class="section-heading reveal">
+          <p class="section-label">Implementation</p>
+          <h2 class="section-title">How the idea becomes a usable ecosystem.</h2>
+          <p class="section-copy">
+            The rollout section shows the framework, prototype direction, budget expectations, and the six-month delivery plan.
+          </p>
+        </div>
+
+        <div class="implementation-layout">
+          <div class="implementation-main">
+            <div class="deck-card framework-card reveal" id="framework-card"></div>
+            <div class="deck-card prototype-card reveal" id="prototype-card"></div>
+          </div>
+
+          <div class="implementation-side">
+            <div class="deck-card budget-card reveal" id="budget-card"></div>
+            <div class="deck-card timeline-card reveal" id="timeline-card"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing-section section-observed" id="closing">
+        <div class="closing-card reveal">
+          <p class="section-label">Closing</p>
+          <h2 class="section-title" id="closing-title"></h2>
+          <p class="section-copy" id="closing-copy"></p>
+          <div class="closing-pillars" id="closing-pillars"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer reveal">
+      <p class="footer-script">Thank you!</p>
+      <p class="footer-copy" id="footer-copy"></p>
+    </footer>
+  </div>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

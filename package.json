@@ -4,6 +4,7 @@
   "private": true,
   "description": "A static presentation website for the Smart Student Burnout & Productivity Ecosystem.",
   "scripts": {
+    "build": "node scripts/build.mjs",
     "start": "node server.js"
   }
 }
