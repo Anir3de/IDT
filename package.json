@@ -1,8 +1,8 @@
 {
-  "name": "ani-pari-railway-site",
+  "name": "smart-student-presentation-site",
   "version": "1.0.0",
   "private": true,
-  "description": "A deployable romantic website with zero runtime dependencies.",
+  "description": "A static presentation website for the Smart Student Burnout & Productivity Ecosystem.",
   "scripts": {
     "start": "node server.js"
   }

@@ -125,5 +125,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, () => {
-  console.log(`Ani & Pari site running on http://localhost:${port}`);
+  console.log(`Smart Student presentation site running on http://localhost:${port}`);
 });
