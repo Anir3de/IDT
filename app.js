@@ -7,9 +7,11 @@ const heroTitle = document.getElementById("hero-title");
 const heroDescription = document.getElementById("hero-description");
 const heroFeatures = document.getElementById("hero-features");
 const heroStatStrip = document.getElementById("hero-stat-strip");
+const heroMontage = document.getElementById("hero-montage");
 const teamGrid = document.getElementById("team-grid");
 const signalList = document.getElementById("signal-list");
 const posterSummary = document.getElementById("poster-summary");
+const storyGallery = document.getElementById("story-gallery");
 const researchGrid = document.getElementById("research-grid");
 const strategyGrid = document.getElementById("strategy-grid");
 const frameworkCard = document.getElementById("framework-card");
@@ -41,6 +43,14 @@ function renderList(items, className = "bullet-list") {
   return `<ul class="${className}">${items.map((item) => `<li>${item}</li>`).join("")}</ul>`;
 }
 
+function renderImageCrop(item, className) {
+  return `
+    <div class="${className}">
+      <img src="${item.src}" alt="${item.title || item.name}" style="object-position: ${item.position};">
+    </div>
+  `;
+}
+
 function renderHero() {
   heroEyebrow.textContent = siteContent.hero.eyebrow;
   heroTitle.innerHTML = siteContent.hero.title
@@ -61,11 +71,27 @@ function renderHero() {
 
   heroStatStrip.innerHTML = renderMetricTiles(siteContent.metrics, true);
 
+  heroMontage.innerHTML = siteContent.heroMontage
+    .map(
+      (item, index) => `
+        <article class="montage-card montage-card-${index + 1} ${item.tone}">
+          ${renderImageCrop(item, "montage-image")}
+          <div class="montage-copy">
+            <p>${item.title}</p>
+            <span>${item.caption}</span>
+          </div>
+        </article>
+      `
+    )
+    .join("");
+
   teamGrid.innerHTML = siteContent.team
     .map(
       (member) => `
         <article class="team-card ${member.accent}">
-          <div class="avatar-badge">${member.name.split(" ").map((part) => part[0]).join("").slice(0, 2)}</div>
+          <div class="team-photo-wrap">
+            <img class="team-photo" src="${member.image}" alt="${member.name}" style="object-position: ${member.position};">
+          </div>
           <div>
             <h3>${member.name}</h3>
             <p class="team-role">${member.role}</p>
@@ -90,16 +116,16 @@ function renderHero() {
 
 function renderPosterSummary() {
   posterSummary.innerHTML = `
-    <div class="deck-card summary-card">
+    <div class="deck-card summary-card highlight-card">
       <p class="card-kicker">Deck advantage</p>
       <h3>${siteContent.posterSummary.title}</h3>
       <p>${siteContent.posterSummary.text}</p>
     </div>
-    <div class="deck-card summary-card">
+    <div class="deck-card summary-card glow-card">
       <p class="card-kicker">What improves</p>
       ${renderList(siteContent.posterSummary.highlights)}
     </div>
-    <div class="deck-card summary-card">
+    <div class="deck-card summary-card light-card">
       <p class="card-kicker">Core system</p>
       <div class="summary-pills">
         ${siteContent.heroFeatures.map((item) => `<span>${item}</span>`).join("")}
@@ -108,13 +134,30 @@ function renderPosterSummary() {
   `;
 }
 
+function renderVisualStory() {
+  storyGallery.innerHTML = siteContent.visualStory
+    .map(
+      (item, index) => `
+        <article class="gallery-card reveal ${item.tone} gallery-card-${index + 1}">
+          ${renderImageCrop(item, "gallery-photo")}
+          <div class="gallery-content">
+            <p class="gallery-tag">${item.tag}</p>
+            <h3>${item.title}</h3>
+            <p>${item.text}</p>
+          </div>
+        </article>
+      `
+    )
+    .join("");
+}
+
 function renderResearch() {
   const { problem, bigIdea, persona, stakeholders, inspirationTools, insights } = siteContent.research;
 
   researchGrid.innerHTML = `
-    <article class="deck-card reveal">
+    <article class="deck-card reveal tone-violet">
       <p class="card-kicker">1.1 ${problem.title}</p>
-      <h3>Burnout is hurting student performance.</h3>
+      <h3>Burnout is affecting both well-being and performance.</h3>
       <p>${problem.intro}</p>
       <div class="metrics-grid">
         ${renderMetricTiles(siteContent.metrics)}
@@ -122,7 +165,7 @@ function renderResearch() {
       <p class="result-note">${problem.outcome}</p>
     </article>
 
-    <article class="deck-card reveal">
+    <article class="deck-card reveal tone-mint">
       <p class="card-kicker">1.2 ${bigIdea.title}</p>
       <h3>One intelligent support ecosystem.</h3>
       ${bigIdea.paragraphs.map((paragraph) => `<p>${paragraph}</p>`).join("")}
@@ -131,10 +174,10 @@ function renderResearch() {
       </div>
     </article>
 
-    <article class="deck-card reveal persona-card">
+    <article class="deck-card reveal persona-card tone-cyan">
       <p class="card-kicker">1.3 User persona and interviews</p>
       <div class="persona-header">
-        <div class="persona-portrait">AK</div>
+        <img class="persona-photo" src="${persona.image}" alt="${persona.name}" style="object-position: ${persona.position};">
         <div>
           <h3>${persona.name}</h3>
           <p>${persona.role} • Age ${persona.age} • ${persona.location}</p>
@@ -152,17 +195,17 @@ function renderResearch() {
       </div>
       <blockquote>${persona.quote}</blockquote>
       <p class="interview-note">
-        Interviews with 15 students revealed consistent themes around pressure, time management, lack of balance, and the need for guidance that feels personal.
+        Interviews with 15 students revealed repeated themes around overload, procrastination, lack of structure, and the need for support that feels personal instead of generic.
       </p>
     </article>
 
-    <article class="deck-card reveal">
+    <article class="deck-card reveal tone-orange">
       <p class="card-kicker">1.4 Stakeholders</p>
-      <h3>Support system around the student.</h3>
+      <h3>Support around the student matters too.</h3>
       ${renderList(stakeholders, "stakeholder-list")}
     </article>
 
-    <article class="deck-card reveal tools-card">
+    <article class="deck-card reveal tools-card tone-sunset">
       <p class="card-kicker">1.5 Inspiration tools</p>
       <h3>Empathy map and AEIOU analysis.</h3>
       <div class="tools-layout">
@@ -205,9 +248,9 @@ function renderResearch() {
       </div>
     </article>
 
-    <article class="deck-card reveal">
+    <article class="deck-card reveal tone-deep">
       <p class="card-kicker">Key insights</p>
-      <h3>What the research made obvious.</h3>
+      <h3>What the research made impossible to ignore.</h3>
       ${renderList(insights)}
     </article>
   `;
@@ -217,14 +260,14 @@ function renderStrategy() {
   const { strategicDefinition, boundaries, valueCanvas, operationalPlan, practicalTools } = siteContent.strategy;
 
   strategyGrid.innerHTML = `
-    <article class="deck-card reveal">
+    <article class="deck-card reveal tone-violet">
       <p class="card-kicker">2.1 Strategic definition</p>
       <h3>Problem statement and SMART goal.</h3>
       <p>${strategicDefinition.problemStatement}</p>
       ${renderList(strategicDefinition.smartGoal)}
     </article>
 
-    <article class="deck-card reveal">
+    <article class="deck-card reveal tone-cyan">
       <p class="card-kicker">2.2 Project boundaries</p>
       <h3>What belongs in the first release.</h3>
       <div class="scope-columns">
@@ -239,7 +282,7 @@ function renderStrategy() {
       </div>
     </article>
 
-    <article class="deck-card reveal">
+    <article class="deck-card reveal tone-mint">
       <p class="card-kicker">2.3 Value canvas</p>
       <h3>Business and social value.</h3>
       <div class="value-grid">
@@ -256,7 +299,7 @@ function renderStrategy() {
       </div>
     </article>
 
-    <article class="deck-card reveal">
+    <article class="deck-card reveal tone-orange">
       <p class="card-kicker">2.4 Operational plan</p>
       <h3>From insight to launch.</h3>
       <div class="plan-steps">
@@ -273,7 +316,7 @@ function renderStrategy() {
       </div>
     </article>
 
-    <article class="deck-card reveal wide-card">
+    <article class="deck-card reveal wide-card tone-sunset">
       <p class="card-kicker">2.5 Practical tools</p>
       <h3>SCAMPER thinking and a simple decision matrix.</h3>
       <div class="tools-layout">
@@ -322,7 +365,7 @@ function renderImplementation() {
         .join("")}
     </div>
     <p class="support-copy">
-      The framework keeps the concept human-centered while moving from empathy to implementation in a way that is easy to explain during a presentation.
+      This framework keeps the ecosystem human-centered while still making the concept feel buildable, testable, and realistic in front of an audience.
     </p>
   `;
 
@@ -515,6 +558,7 @@ function bindMenu() {
 function init() {
   renderHero();
   renderPosterSummary();
+  renderVisualStory();
   renderResearch();
   renderStrategy();
   renderImplementation();

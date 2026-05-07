@@ -3,32 +3,59 @@ export const siteContent = {
     eyebrow: "AI-powered well-being and productivity concept",
     title: ["Smart Student", "Burnout & Productivity", "Ecosystem"],
     description:
-      "An AI-powered ecosystem that helps university students prevent burnout, manage stress, build healthy habits, and stay productive without adding more pressure."
+      "A colorful student-first platform concept that combines emotional support, academic planning, and habit-building into one motivating digital ecosystem."
   },
   heroFeatures: [
-    "Understand your stress",
-    "Plan smarter",
-    "Build healthy habits",
-    "Thrive every day"
+    "Understand stress patterns",
+    "Plan around real student life",
+    "Build healthier routines",
+    "Stay motivated every day"
+  ],
+  heroMontage: [
+    {
+      title: "Burnout reality",
+      caption: "The pressure is emotional, academic, and constant.",
+      src: "/media/poster-reference.png",
+      position: "14% 16%",
+      tone: "violet"
+    },
+    {
+      title: "Student persona",
+      caption: "The solution begins with empathy, not assumptions.",
+      src: "/media/poster-reference.png",
+      position: "56% 34%",
+      tone: "teal"
+    },
+    {
+      title: "Prototype vision",
+      caption: "The system becomes tangible through app experiences.",
+      src: "/media/poster-reference.png",
+      position: "50% 80%",
+      tone: "orange"
+    }
   ],
   team: [
     {
       name: "Aniruddh Nageswar",
-      role: "Product strategy",
-      note: "Research framing, systems thinking, and storytelling",
-      accent: "violet"
+      role: "Product strategy and concept direction",
+      note: "Framed the problem, shaped the ecosystem logic, and structured the final narrative.",
+      accent: "violet",
+      image: "/media/poster-reference.png",
+      position: "75% 14%"
     },
     {
       name: "Lekhashree Balamurugan",
-      role: "UX and presentation",
-      note: "Persona design, experience flow, and concept delivery",
-      accent: "mint"
+      role: "UX thinking and presentation design",
+      note: "Translated research into a student-centered experience and visual communication system.",
+      accent: "mint",
+      image: "/media/poster-reference.png",
+      position: "93% 14%"
     }
   ],
   heroSignals: [
-    "15 student interviews across multiple departments informed the concept.",
-    "The ecosystem combines stress support, planning, habit building, and motivation in one place.",
-    "A six-month rollout plan keeps the idea realistic enough for an academic presentation."
+    "Built around real student stress, time pressure, and lack of balance.",
+    "Combines planning, well-being, and habit support instead of separating them.",
+    "Structured for an academic presentation with clear research, strategy, and rollout."
   ],
   metrics: [
     {
@@ -40,94 +67,134 @@ export const siteContent = {
     {
       value: 60,
       suffix: "%",
-      label: "report fatigue, sleep struggles, or burnout symptoms",
+      label: "report fatigue, poor sleep, or burnout symptoms",
       source: "Healthy Minds, 2022"
     },
     {
       value: 70,
       suffix: "%",
-      label: "say they lack effective tools for stress and time management",
+      label: "say they lack effective stress and time-management tools",
       source: "McKinsey, 2023"
     }
   ],
   posterSummary: {
     title: "From poster board to presentation website",
     text:
-      "The site keeps your original content intact, but reorganizes it into a cleaner sequence for presenting: hook the audience, prove the problem, explain the system, then show delivery.",
+      "The website keeps the poster's research and concept intact, but turns it into a cleaner presentation flow: attract attention, explain the pain points, show the system, and end with delivery confidence.",
     highlights: [
-      "Large-screen friendly layout for presenting on a laptop or projector",
-      "Single-page flow that mirrors your board without feeling crowded",
-      "Better hierarchy for team, research, strategy, and implementation"
+      "A stronger opening for live presentation and screen sharing",
+      "Clearer transitions between inspiration, ideation, and implementation",
+      "A more modern visual language with color, depth, and pacing"
     ]
   },
+  visualStory: [
+    {
+      tag: "The problem",
+      title: "Burnout is not just stress. It becomes academic drag.",
+      text:
+        "Students are not only overwhelmed, they are losing focus, routine, confidence, and momentum. The design starts by making that pain visible.",
+      src: "/media/poster-reference.png",
+      position: "15% 17%",
+      tone: "violet"
+    },
+    {
+      tag: "The user",
+      title: "The persona makes the concept feel human.",
+      text:
+        "Ayesha represents students trying to perform, stay healthy, and keep up with expectations while feeling unsupported.",
+      src: "/media/poster-reference.png",
+      position: "55% 33%",
+      tone: "cyan"
+    },
+    {
+      tag: "The product",
+      title: "The ecosystem moves from advice to action.",
+      text:
+        "Instead of generic motivation, students get practical help through dashboards, trackers, planning tools, and well-being nudges.",
+      src: "/media/poster-reference.png",
+      position: "50% 80%",
+      tone: "orange"
+    },
+    {
+      tag: "The team",
+      title: "A collaborative concept with a clear presentation voice.",
+      text:
+        "The final system works because research, storytelling, and experience design were treated as one connected effort.",
+      src: "/media/poster-reference.png",
+      position: "84% 14%",
+      tone: "mint"
+    }
+  ],
   research: {
     problem: {
       title: "Problem and evidence",
       intro:
-        "Student burnout is a growing crisis that affects mental health, academic performance, and everyday well-being.",
+        "Student burnout is no longer a side issue. It affects concentration, attendance, academic performance, and the ability to stay emotionally steady throughout university life.",
       outcome:
-        "The result is lower productivity, more missed opportunities, and a higher risk of disengagement."
+        "Without timely support, stress turns into lower productivity, weaker routines, and a higher chance of disengagement."
     },
     bigIdea: {
       title: "The big idea",
       paragraphs: [
-        "A personalized AI-powered ecosystem that helps students understand their stress, plan better, build healthy habits, and stay productive.",
-        "Instead of scattered tips and disconnected tools, the experience brings support into one intelligent platform."
+        "Smart Student is a personalized AI-powered ecosystem that helps students understand their stress, plan smarter, build healthy habits, and stay productive with less friction.",
+        "The goal is not to make students work harder. It is to help them work sustainably, with support that feels intelligent, encouraging, and practical."
       ],
       checklist: [
         "Early support",
         "Smarter planning",
-        "Better well-being",
-        "Stronger future"
+        "Habit reinforcement",
+        "Long-term well-being"
       ]
     },
     persona: {
       name: "Ayesha Khan",
       age: "20",
-      role: "University Student (CS)",
-      location: "Urban campus",
+      role: "Computer Science student",
+      location: "Urban university campus",
+      image: "/media/poster-reference.png",
+      position: "56% 34%",
       goals: [
-        "Do well academically",
-        "Stay healthy",
-        "Manage time better"
+        "Perform well academically",
+        "Stay healthy during busy semesters",
+        "Use time in a more realistic way"
       ],
       frustrations: [
-        "Stress and poor sleep",
-        "Procrastination",
-        "Lack of guidance"
+        "Stress, poor sleep, and inconsistent focus",
+        "Procrastination under pressure",
+        "Too many tips, not enough guidance"
       ],
       quote:
-        "I want a tool that understands me, helps me plan, and keeps me motivated without adding more stress."
+        "I want something that understands how stressed I am, helps me plan realistically, and keeps me moving without making me feel worse."
     },
     stakeholders: [
       "Students as primary users",
-      "Teachers and advisors",
+      "Teachers and academic advisors",
       "Parents and guardians",
       "University administration",
       "Mental health professionals",
-      "Sponsors and partners"
+      "Sponsors and strategic partners"
     ],
     inspirationTools: {
       empathyMap: {
         says: [
           "I feel overwhelmed.",
-          "I need a study plan.",
-          "I need someone to guide me."
+          "I need a proper study plan.",
+          "I wish someone could guide me."
         ],
         thinks: [
-          "How can I manage everything?",
-          "What if I fail?",
-          "I need balance."
+          "How do I manage everything at once?",
+          "What if I fall behind again?",
+          "I need balance, not more guilt."
         ],
         does: [
           "Studies at the last minute",
-          "Scrolls on the phone",
-          "Tries random productivity tips"
+          "Scrolls when stressed",
+          "Tries random productivity advice"
         ],
         feels: [
           "Stressed",
           "Anxious",
-          "Tired",
+          "Exhausted",
           "Unmotivated"
         ]
       },
@@ -138,7 +205,7 @@ export const siteContent = {
         },
         {
           label: "Environments",
-          value: "Home, university, library, hostel, cafeteria, online"
+          value: "Home, university, library, hostel, cafeteria, online spaces"
         },
         {
           label: "Interactions",
@@ -150,36 +217,36 @@ export const siteContent = {
         },
         {
           label: "Users",
-          value: "Students, faculty, counselors, parents, admin"
+          value: "Students, faculty, counselors, parents, university admin"
         }
       ]
     },
     insights: [
-      "Students feel constant pressure and lack balance.",
-      "They need personalized guidance, not generic tips.",
-      "They want one simple platform instead of multiple scattered tools.",
-      "Early detection and habit building can prevent burnout before it escalates."
+      "Students feel constant pressure and rarely feel in control of their pace.",
+      "They need personalized support, not generic productivity slogans.",
+      "They want one supportive platform instead of many disconnected tools.",
+      "Early detection and habit-building matter more than waiting for burnout to worsen."
     ]
   },
   strategy: {
     strategicDefinition: {
       problemStatement:
-        "Students struggle with stress, poor time management, and a lack of personalized support, which leads to burnout and lower productivity.",
+        "University students struggle with stress, poor time management, and a lack of personalized support, which leads to burnout, lower academic confidence, and weaker productivity.",
       smartGoal: [
         "Specific: reduce student burnout through a smart digital ecosystem.",
-        "Measurable: improve productivity scores by 30 percent within three months.",
-        "Achievable: use personalized plans and real-time support.",
-        "Relevant: strengthen both well-being and academic quality.",
-        "Time-bound: target the next academic year."
+        "Measurable: improve productivity and routine quality by 30 percent within three months.",
+        "Achievable: use personalized guidance, planning, and habit support.",
+        "Relevant: improve both well-being and academic performance.",
+        "Time-bound: prepare for rollout in the next academic year."
       ]
     },
     boundaries: {
       inScope: [
         "University students aged 18 to 25",
         "Academic life and mental well-being",
-        "Stress tracking and habit building",
+        "Stress tracking and habit-building",
         "Study planning and productivity tools",
-        "Mobile app and web platform"
+        "Mobile and web experience"
       ],
       outOfScope: [
         "Clinical treatment or therapy",
@@ -191,22 +258,22 @@ export const siteContent = {
     valueCanvas: [
       {
         title: "Value for users",
-        items: ["Less stress", "Better focus", "Healthy habits", "Better grades"]
+        items: ["Less stress", "Better focus", "Healthier habits", "Stronger academic outcomes"]
       },
       {
-        title: "Value for university",
+        title: "Value for universities",
         items: [
-          "Higher success rates",
+          "Higher student success rates",
           "Reduced dropouts",
-          "Healthier students",
-          "Data-informed decisions"
+          "Healthier campus culture",
+          "Data-informed support decisions"
         ]
       },
       {
         title: "Value for society",
         items: [
           "Mentally healthier young adults",
-          "A future-ready workforce"
+          "A future-ready and resilient workforce"
         ]
       },
       {
@@ -214,27 +281,27 @@ export const siteContent = {
         items: [
           "Brand visibility",
           "CSR impact",
-          "An engaged user base"
+          "Access to an engaged student user base"
         ]
       }
     ],
     operationalPlan: [
-      "Research and empathize through interviews, surveys, and data collection",
-      "Define the core student problems and decision criteria",
-      "Ideate product directions and select the strongest concepts",
-      "Prototype low-fidelity and high-fidelity flows",
+      "Research and empathize through interviews, surveys, and evidence gathering",
+      "Define the strongest student pain points and success criteria",
+      "Ideate concepts and select the most meaningful product directions",
+      "Prototype low-fidelity and high-fidelity experience flows",
       "Test with students and refine using feedback",
-      "Implement, launch, and iterate"
+      "Implement, launch, and iterate continuously"
     ],
     practicalTools: {
       scamper: [
-        "Substitute: replace a basic planner with an AI planner and AI coach",
-        "Combine: merge stress tracking with study planning",
-        "Adapt: borrow habit loops from fitness apps",
-        "Modify: add gamification and rewards",
-        "Put to other use: build peer support into the experience",
-        "Eliminate: remove cluttered and confusing UI patterns",
-        "Reverse: focus on prevention instead of burnout recovery only"
+        "Substitute: replace a static planner with an AI planner and coach",
+        "Combine: connect stress tracking with study planning",
+        "Adapt: borrow streaks and loops from fitness apps",
+        "Modify: add gamification and rewards for momentum",
+        "Put to other use: use peer support as a motivational layer",
+        "Eliminate: remove cluttered interfaces and overwhelming dashboards",
+        "Reverse: focus on prevention instead of responding after burnout"
       ],
       matrix: [
         { name: "AI Study Planner", impact: 5, feasibility: 4, cost: 4, total: 13 },
@@ -256,29 +323,29 @@ export const siteContent = {
     prototypes: [
       {
         name: "Dashboard",
-        focus: "Quick well-being snapshot",
-        details: ["Energy score", "Daily check-in", "Weekly pattern"]
+        focus: "A clear well-being snapshot",
+        details: ["Energy score", "Daily mood check-in", "Weekly pattern overview"]
       },
       {
         name: "Stress Tracker",
-        focus: "Understand your pressure curve",
-        details: ["Stress level", "Triggers", "Trend view"]
+        focus: "Understand what drives pressure",
+        details: ["Stress level input", "Trigger tracking", "Trend visualizations"]
       },
       {
         name: "Study Planner",
-        focus: "Build realistic routines",
-        details: ["Task planning", "Priority sorting", "Review reminders"]
+        focus: "Build realistic study structure",
+        details: ["Task planning", "Priority sorting", "Gentle review reminders"]
       },
       {
         name: "Well-being Hub",
-        focus: "Small actions that compound",
-        details: ["Breathing tools", "Habit streaks", "Guided reflection"]
+        focus: "Turn self-care into repeatable actions",
+        details: ["Breathing tools", "Habit streaks", "Reflection prompts"]
       }
     ],
     productMetrics: [
       { value: "1,248", label: "Active students", trend: "+12%" },
-      { value: "Medium", label: "Average stress level", trend: "stable" },
-      { value: "Study Planner", label: "Most used feature", trend: "top choice" },
+      { value: "Medium", label: "Average stress level", trend: "more stable" },
+      { value: "Study Planner", label: "Most used feature", trend: "student favorite" },
       { value: "78%", label: "Habit completion rate", trend: "+8%" }
     ],
     budget: [
@@ -300,16 +367,16 @@ export const siteContent = {
       { label: "Launch", start: 6, span: 1, tone: "orange" }
     ],
     presentationPoints: [
-      "Well-structured and visually effective flow",
-      "Clear storytelling using data and insights",
-      "Engaging prototype concepts and demo framing",
-      "Balanced participation and Q&A readiness"
+      "Clean flow with strong visual hierarchy",
+      "Research-backed storytelling instead of disconnected slides",
+      "More engaging product mock-up direction",
+      "Prepared for discussion, demo, and Q&A"
     ]
   },
   closing: {
     title: "A healthier, happier, and more productive student community.",
     copy:
-      "The concept works because it does not treat productivity and well-being as separate problems. It connects them into one supportive system students can actually keep using.",
+      "This concept succeeds because it treats productivity and well-being as one connected experience. Students do not need more pressure. They need guidance, structure, and support that feels human.",
     pillars: [
       "We care about students.",
       "We design with empathy.",
@@ -318,6 +385,6 @@ export const siteContent = {
       "Be mindful.",
       "Be productive."
     ],
-    footer: "We are excited to answer your questions."
+    footer: "Thank you for your time. We are excited to answer your questions."
   }
 };
